@@ -1,8 +1,8 @@
 from figures import Triangle, Circle
 
 c1 = Circle(5)
-c2 = Circle(17)
-c3 = Circle(1)
+c2 = Circle(0)
+c3 = Circle(3)
 
 t1 = Triangle(5, 4, 3)
 t2 = Triangle(8, 12, 5)

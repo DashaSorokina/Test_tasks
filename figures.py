@@ -2,11 +2,14 @@ from math import pi, sqrt
 
 
 class Circle:
-    def __init__(self, r) -> object:
+    def __init__(self, r):
+
+        if r < 0:
+            raise ValueError("Radius must be a positive number")
         self.r = r
 
     def get_square(self):
-        return pi * self.r ** 2
+        return round(pi * self.r ** 2, 2)
 
     def print_result(self):
         print(f'Square of circle: {self.get_square()}')
@@ -14,13 +17,19 @@ class Circle:
 
 class Triangle:
     def __init__(self, a, b, c):
+        if a <= 0 or b <= 0 or c <= 0:
+            raise ValueError("Sides of triangle must be positive")
+
+        if (a + b <= c) or (a + c <= b) or (b + c <= a):
+            raise ValueError("This triangle does not exist")
+
         self.a = a
         self.b = b
         self.c = c
 
     def get_square(self):
         p = (self.a + self.b + self.c) / 2
-        return sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
+        return round(sqrt(p * (p - self.a) * (p - self.b) * (p - self.c)), 2)
 
     def check_triangle(self):
         if (self.a ** 2 + self.b ** 2 == self.c ** 2) or (self.b ** 2 + self.c ** 2 == self.a ** 2) or (
