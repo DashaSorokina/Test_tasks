@@ -1,2 +1,2 @@
-#  telegram_project_bot
-Try to learn how create telegram bot
+#  Test tasks
+Some test tasks for interns
