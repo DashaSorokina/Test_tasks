@@ -1,6 +1,6 @@
 from figures import Triangle, Circle
 
-c1 = Circle(5)
+c1 = Circle(5.4)
 c2 = Circle(0)
 c3 = Circle(3)
 

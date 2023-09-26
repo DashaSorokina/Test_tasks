@@ -4,8 +4,12 @@ from math import pi, sqrt
 class Circle:
     def __init__(self, r):
 
+        if not isinstance(r, (int, float)):
+            raise TypeError("Radius should be an int or a float")
+        
         if r < 0:
             raise ValueError("Radius must be a positive number")
+      
         self.r = r
 
     def get_square(self):
@@ -17,6 +21,9 @@ class Circle:
 
 class Triangle:
     def __init__(self, a, b, c):
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)) or not isinstance(c, (int, float)):
+            raise TypeError("Sides of triangle must be integers or floats")
+        
         if a <= 0 or b <= 0 or c <= 0:
             raise ValueError("Sides of triangle must be positive")
 
